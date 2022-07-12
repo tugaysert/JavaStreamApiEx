@@ -20,7 +20,8 @@ public class Main1 {
 
         List<String> threeHighCaloricDishNames = menu.stream()
                 .filter(d -> d.getCalories() > 300)
-                .map(Dish::getName).limit(3)
+                .map(Dish::getName)
+                .limit(3)
                 .collect(Collectors.toList());
 
         System.out.println(threeHighCaloricDishNames);
